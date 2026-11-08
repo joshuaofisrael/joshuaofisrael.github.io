@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Joshua Israel | Software Engineer & AI Builder</title>
+
+  <meta name="description" content="Joshua Israel is a software engineer and entrepreneur in Sarasota, Florida, building Python applications, TypeScript products, AI-powered platforms, and automated agentic systems.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Joshua Israel | Software Engineer & AI Builder">
+  <meta property="og:description" content="Software engineer and founder building AI-powered products, automated publishing systems, and modern web applications.">
+  <meta property="og:url" content="https://joshuaofisrael.github.io/">
+  <meta property="og:site_name" content="Joshua Israel">
+
+  <meta name="theme-color" content="#f8fafc">
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --border: #e5e9f0;
+      --accent: #315de8;
+      --accent-light: #edf2ff;
+      --dark: #111827;
+      --radius: 16px;
+      --width: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    .container {
+      width: min(var(--width), calc(100% - 44px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(248, 250, 252, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-weight: 800;
+      font-size: 17px;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      padding: 116px 0 105px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: #16a36a;
+      border-radius: 50%;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 23px 0 18px;
+      font-size: clamp(48px, 8vw, 82px);
+      line-height: 1.05;
+      letter-spacing: -5px;
+      font-weight: 800;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(19px, 3vw, 26px);
+      font-weight: 600;
+      color: #475467;
+      letter-spacing: -0.6px;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      margin-top: 23px;
+      font-size: 17px;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 20px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      background: white;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .button.primary {
+      background: var(--dark);
+      color: white;
+      border-color: var(--dark);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      color: var(--accent);
+    }
+
+    .button.primary:hover {
+      color: white;
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .location {
+      margin-top: 25px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 78px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-heading {
+      margin-bottom: 35px;
+    }
+
+    .section-label {
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 8px 0 0;
+      font-size: clamp(30px, 5vw, 42px);
+      line-height: 1.2;
+      letter-spacing: -1.8px;
+    }
+
+    .section-intro {
+      max-width: 650px;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .about-content {
+      max-width: 780px;
+      font-size: 17px;
+      color: #475467;
+    }
+
+    .about-content p {
+      margin: 0 0 18px;
+    }
+
+    .education {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .education-card {
+      padding: 21px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .education-card strong {
+      display: block;
+      font-size: 15px;
+    }
+
+    .education-card span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+    }
+
+    .experience-card {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 28px;
+      padding: 27px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .experience-date {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .experience-company {
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .experience-role {
+      margin-top: 2px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .experience-details {
+      margin-top: 13px;
+      padding-left: 19px;
+      color: #586477;
+      font-size: 14px;
+    }
+
+    .experience-details li {
+      padding-left: 3px;
+      margin-bottom: 8px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 310px;
+      padding: 25px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(20, 35, 70, 0.07);
+    }
+
+    .project-number {
+      color: #98a2b3;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+    }
+
+    .project-card h3 {
+      margin: 13px 0 9px;
+      font-size: 21px;
+      letter-spacing: -0.7px;
+    }
+
+    .project-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 19px;
+    }
+
+    .tag {
+      padding: 5px 9px;
+      background: var(--accent-light);
+      color: #3154bd;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 17px;
+      margin-top: auto;
+      padding-top: 24px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .project-links a {
+      color: var(--accent);
+    }
+
+    .more-sites {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .site-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 17px 19px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .site-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .site-link span {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .contact-box {
+      padding: 45px;
+      background: var(--dark);
+      color: white;
+      border-radius: 20px;
+    }
+
+    .contact-box h2 {
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      max-width: 600px;
+      color: #c2cad7;
+      font-size: 15px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .contact-links a {
+      padding: 11px 16px;
+      background: #253044;
+      border: 1px solid #37445a;
+      border-radius: 8px;
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .contact-links a:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+
+    footer {
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    @media (max-width: 700px) {
+      .nav-links {
+        gap: 12px;
+        font-size: 11px;
+      }
+
+      .hero {
+        padding: 80px 0 75px;
+      }
+
+      h1 {
+        letter-spacing: -3px;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .education,
+      .project-grid,
+      .more-sites {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-card {
+        grid-template-columns: 1fr;
+        gap: 9px;
+        padding: 22px;
+      }
+
+      .contact-box {
+        padding: 29px 23px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .container {
+        width: calc(100% - 30px);
+      }
+
+      .brand {
+        font-size: 14px;
+      }
+
+      .nav-links {
+        gap: 9px;
+        font-size: 10px;
+      }
+
+      .nav-links a:nth-child(2) {
+        display: none;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="#">Joshua Israel.</a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero" style="border-top:0;">
+    <div class="container">
+
+      <div class="eyebrow">
+        <span class="status-dot"></span>
+        SOFTWARE ENGINEER & FOUNDER
+      </div>
+
+      <h1>Joshua Israel</h1>
+
+      <div class="hero-subtitle">
+        Software Engineer · Python, TypeScript, LLM & agentic AI
+      </div>
+
+      <p class="hero-description">
+        I build software products, AI-powered applications, automated
+        publishing systems, and web platforms. My work combines software
+        engineering with product thinking and practical AI automation.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button primary" href="#projects">
+          Explore My Work
+        </a>
+
+        <a class="button" href="https://github.com/joshuaofisrael"
+           target="_blank" rel="noopener noreferrer">
+          GitHub Profile
+        </a>
+
+        <a class="button"
+           href="https://www.linkedin.com/in/joshua-israel-mba-b690a221a/"
+           target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
+      </div>
+
+      <div class="location">
+        Sarasota, Florida, United States
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section id="about">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="section-label">01 / ABOUT</div>
+        <h2>Engineering meets entrepreneurship.</h2>
+      </div>
+
+      <div class="about-content">
+
+        <p>
+          I'm a software engineer and entrepreneur with a background
+          in computer science, enterprise software development, and
+          business strategy.
+        </p>
+
+        <p>
+          I've worked on production software at Microsoft and American
+          Airlines, including Python-based clustering algorithms,
+          Azure data pipelines, API integrations, and customer-facing
+          airline products.
+        </p>
+
+        <p>
+          Today, through Joshua Israel Ventures LLC, I develop and
+          operate a growing portfolio of websites and software products.
+          I also orchestrate more than 30 scheduled AI agents on a Linux
+          machine, exploring practical applications of agentic
+          automation and AI-assisted product development.
+        </p>
+
+        <p>
+          My interests include backend engineering, Python automation,
+          TypeScript applications, artificial intelligence, data
+          processing, and building independent digital products.
+        </p>
+
+      </div>
+
+      <div class="education">
+
+        <div class="education-card">
+          <strong>University of Michigan</strong>
+          <span>B.S. Computer Science · 2019</span>
+        </div>
+
+        <div class="education-card">
+          <strong>University of Miami Herbert Business School</strong>
+          <span>MBA · 2026</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- EXPERIENCE -->
+
+  <section id="experience">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="section-label">02 / EXPERIENCE</div>
+        <h2>Professional experience.</h2>
+        <p class="section-intro">
+          Software engineering, enterprise development, AI applications,
+          and independent product development.
+        </p>
+      </div>
+
+      <div class="experience-list">
+
+        <article class="experience-card">
+
+          <div>
+            <div class="experience-date">2026 – Present</div>
+          </div>
+
+          <div>
+            <div class="experience-company">
+              Joshua Israel Ventures LLC
+            </div>
+
+            <div class="experience-role">
+              Founder
+            </div>
+
+            <ul class="experience-details">
+              <li>
+                Founded an independent software and digital products
+                venture.
+              </li>
+
+              <li>
+                Built and operates a portfolio of 15+ live websites
+                and products.
+              </li>
+
+              <li>
+                Orchestrates 30+ scheduled AI agents on a Linux machine.
+              </li>
+
+              <li>
+                Develops web applications, AI-powered products, and
+                automated publishing systems.
+              </li>
+            </ul>
+          </div>
+
+        </article>
+
+
+        <article class="experience-card">
+
+          <div>
+            <div class="experience-date">2024</div>
+          </div>
+
+          <div>
+            <div class="experience-company">
+              Asset Management AI
+            </div>
+
+            <div class="experience-role">
+              Product & Engineering Lead
+            </div>
+
+            <ul class="experience-details">
+              <li>
+                Built a Python and Flask-based AI application.
+              </li>
+
+              <li>
+                Developed software to automate real estate asset
+                management tasks.
+              </li>
+
+              <li>
+                Combined product development and engineering
+                responsibilities.
+              </li>
+            </ul>
+          </div>
+
+        </article>
+
+
+        <article class="experience-card">
+
+          <div>
+            <div class="experience-date">April – December 2023</div>
+          </div>
+
+          <div>
+            <div class="experience-company">
+              Microsoft
+            </div>
+
+            <div class="experience-role">
+              Software Engineering Contractor
+            </div>
+
+            <ul class="experience-details">
+              <li>
+                Developed four Python clustering algorithms enabling
+                enforcement teams to ban 6,000+ criminal accounts.
+              </li>
+
+              <li>
+                Built a CSV-to-SQL data ingestion pipeline using
+                Azure Data Factory.
+              </li>
+
+              <li>
+                Automated SharePoint data ingestion through the
+                Microsoft Graph API.
+              </li>
+            </ul>
+          </div>
+
+        </article>
+
+
+        <article class="experience-card">
+
+          <div>
+            <div class="experience-date">October 2021 – January 2023</div>
+          </div>
+
+          <div>
+            <div class="experience-company">
+              American Airlines
+            </div>
+
+            <div class="experience-role">
+              Software Developer
+            </div>
+
+            <ul class="experience-details">
+              <li>
+                Delivered instant upsell, prepaid baggage, and priority
+                boarding features through email receipts to millions
+                of travelers.
+              </li>
+
+              <li>
+                Developed backend data transfer functionality for the
+                JetBlue baggage partnership.
+              </li>
+            </ul>
+          </div>
+
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROJECTS -->
+
+  <section id="projects">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="section-label">03 / SELECTED PROJECTS</div>
+        <h2>Things I've built.</h2>
+        <p class="section-intro">
+          Independent software projects spanning AI, data engineering,
+          automation, mobile development, and web applications.
+        </p>
+      </div>
+
+      <div class="project-grid">
+
+
+        <!-- PROJECT 1 -->
+
+        <article class="project-card">
+
+          <div class="project-number">PROJECT 01</div>
+
+          <h3>Map the Midterms</h3>
+
+          <p>
+            A 2026 US midterm election information platform featuring
+            client-side ZIP code lookup, sourced race guides, cited
+            polling tables, attributed ratings, and an election
+            results tracker.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Next.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">React</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">GitHub Actions</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/joshuaofisrael/midterm-map"
+               target="_blank" rel="noopener noreferrer">
+              GitHub →
+            </a>
+
+            <a href="https://mapthemidterms.com"
+               target="_blank" rel="noopener noreferrer">
+              Live Website →
+            </a>
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 2 -->
+
+        <article class="project-card">
+
+          <div class="project-number">PROJECT 02</div>
+
+          <h3>S&P 500 X Sentiment</h3>
+
+          <p>
+            A Python-based daily sentiment index that analyzes X
+            (Twitter) cashtag posts and aggregates company-level
+            sentiment using S&P 500 market capitalization weights.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Data Processing</span>
+            <span class="tag">Sentiment Analysis</span>
+            <span class="tag">Financial Data</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/joshuaofisrael/sp500-x-sentiment"
+               target="_blank" rel="noopener noreferrer">
+              GitHub →
+            </a>
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 3 -->
+
+        <article class="project-card">
+
+          <div class="project-number">PROJECT 03</div>
+
+          <h3>Eye Dilation Drunk</h3>
+
+          <p>
+            A native iOS entertainment application that estimates
+            pupil dilation using the device camera and flashlight,
+            with image analysis performed on-device.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Swift</span>
+            <span class="tag">iOS</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Camera APIs</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/joshuaofisrael/eye-dilation-drunk"
+               target="_blank" rel="noopener noreferrer">
+              GitHub →
+            </a>
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 4 -->
+
+        <article class="project-card">
+
+          <div class="project-number">PROJECT 04</div>
+
+          <h3>AI News</h3>
+
+          <p>
+            An automated artificial intelligence news publication
+            featuring a JavaScript-based content sourcing and
+            publishing pipeline.
+          </p>
+
+          <div class="tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">AI Automation</span>
+            <span class="tag">Content Pipelines</span>
+            <span class="tag">Publishing</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/joshuaofisrael/ai-news"
+               target="_blank" rel="noopener noreferrer">
+              GitHub →
+            </a>
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 5 -->
+
+        <article class="project-card">
+
+          <div class="project-number">PROJECT 05</div>
+
+          <h3>Humanoid News</h3>
+
+          <p>
+            An automated humanoid robotics news publication built
+            around a Python-based content sourcing, processing,
+            and publishing pipeline.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Automation</span>
+            <span class="tag">Content Pipelines</span>
+            <span class="tag">Robotics</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/joshuaofisrael/humanoid-news"
+               target="_blank" rel="noopener noreferrer">
+              GitHub →
+            </a>
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 6 -->
+
+        <article class="project-card">
+
+          <div class="project-number">PROJECT 06</div>
+
+          <h3>Pick Your Row</h3>
+
+          <p>
+            An aviation research website featuring original airline
+            seat maps and cabin reviews, helping travelers research
+            aircraft seating arrangements and cabin experiences.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Astro</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Web Development</span>
+            <span class="tag">Aviation</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/joshuaofisrael/pickyourrow"
+               target="_blank" rel="noopener noreferrer">
+              GitHub →
+            </a>
+          </div>
+
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- MORE LIVE PRODUCTS -->
+
+  <section id="products">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="section-label">04 / MORE PROJECTS</div>
+        <h2>More things I've launched.</h2>
+        <p class="section-intro">
+          Additional live websites and independent digital products.
+        </p>
+      </div>
+
+      <div class="more-sites">
+
+        <a class="site-link"
+           href="https://joshuaofisrael.github.io/promptframed/"
+           target="_blank" rel="noopener noreferrer">
+          PromptFramed
+          <span>AI Art Gallery ↗</span>
+        </a>
+
+        <a class="site-link"
+           href="https://joshuaofisrael.github.io/namedscan/"
+           target="_blank" rel="noopener noreferrer">
+          NamedScan
+          <span>AI Visibility Reports ↗</span>
+        </a>
+
+        <a class="site-link"
+           href="https://joshuaofisrael.github.io/bigcatwise/"
+           target="_blank" rel="noopener noreferrer">
+          BigCatWise
+          <span>Live Website ↗</span>
+        </a>
+
+        <a class="site-link"
+           href="https://joshuaofisrael.github.io/snoutswise/"
+           target="_blank" rel="noopener noreferrer">
+          SnoutsWise
+          <span>Live Website ↗</span>
+        </a>
+
+        <a class="site-link"
+           href="https://joshuaofisrael.github.io/meowwise/"
+           target="_blank" rel="noopener noreferrer">
+          MeowWise
+          <span>Live Website ↗</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+    <div class="container">
+
+      <div class="contact-box">
+
+        <div class="section-label" style="color:#9bb5ff;">
+          05 / GET IN TOUCH
+        </div>
+
+        <h2>Let's build something.</h2>
+
+        <p>
+          Interested in software engineering, AI applications,
+          automation, or building new products? I'd be happy to
+          connect.
+        </p>
+
+        <div class="contact-links">
+
+          <a href="mailto:joshuaofisrael@gmail.com">
+            Email Me
+          </a>
+
+          <a href="https://www.linkedin.com/in/joshua-israel-mba-b690a221a/"
+             target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+
+          <a href="https://github.com/joshuaofisrael"
+             target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<footer>
+  <div class="container footer-inner">
+
+    <span>© 2026 Joshua Israel. All rights reserved.</span>
+
+    <span>
+      Sarasota, Florida ·
+      <a href="mailto:joshuaofisrael@gmail.com">
+        Get in touch
+      </a>
+    </span>
+
+  </div>
+</footer>
+
+</body>
+</html>
